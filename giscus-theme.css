@@ -1,0 +1,94 @@
+:root {
+  --giscus-border-radius: 12px;
+  --giscus-comment-radius: 8px;
+}
+
+/* ========== 隐藏 "Powered by GitHub Discussions" 标识 ========== */
+/* footer 元素 */
+footer,
+footer a {
+  display: none !important;
+}
+
+/* 包含 footer 相关类名的元素 */
+[class*="Footer"],
+[class*="footer"] {
+  display: none !important;
+}
+
+/* giscus 的 branding 链接 */
+a[href*="github.com/discussions"] {
+  display: none !important;
+}
+
+/* ========== 评论区整体圆角 ========== */
+/* giscus 内部主容器 */
+.gsc-body,
+.discussion-item,
+.js-comment-container,
+.Box,
+.js-prose {
+  border-radius: var(--giscus-border-radius) !important;
+  overflow: hidden !important;
+}
+
+/* 评论卡片/行 */
+.js-comment-item,
+.timeline-item,
+.Box-row,
+.Box-row--condensed {
+  border-radius: var(--giscus-comment-radius) !important;
+}
+
+/* 评论输入框/编辑器 */
+.js-comment-editor,
+[data-testid="comment-editor"],
+[contenteditable="true"],
+[class*="editor"],
+.CommentEditor,
+.form-control {
+  border-radius: var(--giscus-comment-radius) !important;
+}
+
+/* 按钮圆角 */
+[class*="Btn"],
+[class*="btn"],
+button,
+input[type="submit"],
+input[type="button"] {
+  border-radius: 6px !important;
+}
+
+/* 头像圆角 */
+.avatar,
+.avatar-sm,
+.avatar-md,
+.avatar-user {
+  border-radius: 50% !important;
+}
+
+/* 下拉菜单/弹窗圆角 */
+.dropdown-menu,
+.popover {
+  border-radius: 8px !important;
+}
+
+/* 标签/徽章圆角 */
+.Label,
+.label,
+[class*="label"] {
+  border-radius: 50px !important;
+}
+
+/* 滚动条美化 */
+.js-comment-container::-webkit-scrollbar,
+[class*="scrollable"]::-webkit-scrollbar {
+  width: 8px;
+}
+[class*="scrollable"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+[class*="scrollable"]::-webkit-scrollbar-thumb {
+  background-color: rgba(175, 184, 193, 0.5);
+  border-radius: 50px;
+}
